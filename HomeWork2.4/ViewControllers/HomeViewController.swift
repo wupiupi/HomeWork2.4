@@ -7,23 +7,33 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+final class HomeViewController: UIViewController {
+    
+    // MARK: - IB Outlets
+    @IBOutlet var greetingLabel: UILabel!
+    
+    // MARK: - Propertie
+    var greeting: String!
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        greetingLabel.text = greeting
+        setupUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Setup UI
+    
+    private func setupUI() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [
+            UIColor.systemPink.cgColor,
+            UIColor.systemTeal.cgColor,
+            UIColor.systemMint.cgColor
+        ]
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
-    */
-
+     
 }
