@@ -9,14 +9,15 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    // MARK: - Properties
-    private let greetings = ["Hello", "Hi", "Hello there", "sup"]
-    
     // MARK: - IB Outlets
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
     @IBOutlet var loginButton: UIButton!
+    
+    // MARK: - Private Properties
+    private let greetings = ["Hello", "Hi", "Hello there", "sup"]
+    
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -24,19 +25,23 @@ final class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 12
     }
     
-    // MARK: - Methods
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
-        if !isDataValid(
-            for: usernameTextField.text ?? "",
-            and: passwordTextField.text ?? ""
-        ) {
+    // MARK: - Navigation
+    override func shouldPerformSegue(
+        withIdentifier identifier: String,
+        sender: Any?
+    ) -> Bool {
+        
+        guard usernameTextField.text == "Paul", passwordTextField.text == "Password" else {
             showAlert(
-                title: "Invalid login or password!",
+                title: "Invalid login or password",
                 message: "Please, enter valid data."
             )
-            return
+            return false
         }
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let homeVC = segue.destination as? HomeViewController
         homeVC?.greeting = "\(greetings.randomElement() ?? ""), \(usernameTextField.text ?? "")!"
@@ -77,17 +82,7 @@ final class LoginViewController: UIViewController {
                               self.passwordTextField.text = nil
                           })
         )
-        
         present(alert, animated: true)
-        
-    }
-    
-    private func isDataValid(for username: String, and password: String) -> Bool {
-        if username == "Paul",
-           password == "Password" {
-            return true
-        }
-        return false
     }
 }
 
