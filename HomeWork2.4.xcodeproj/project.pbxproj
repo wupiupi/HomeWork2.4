@@ -60,13 +60,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		A01ED5CE2B1532EF007875F7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		A05693B32B14E7A40051A1A9 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +79,6 @@
 		A05693BE2B14E7A40051A1A9 /* HomeWork2.4 */ = {
 			isa = PBXGroup;
 			children = (
-				A01ED5CE2B1532EF007875F7 /* View */,
 				A01ED5CB2B1524F0007875F7 /* ViewControllers */,
 				A01ED5CA2B1524DB007875F7 /* Supporting */,
 				A05693CD2B14E7A50051A1A9 /* Info.plist */,
