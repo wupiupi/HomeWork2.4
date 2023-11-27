@@ -13,7 +13,7 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HomeWork2_4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="HomeWork2_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +42,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="loginButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bib-kF-rCi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -76,6 +79,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="GeI-QD-g1b"/>
+                    <connections>
+                        <outlet property="loginButton" destination="lMX-rI-sbx" id="Bxj-Tx-ii4"/>
+                        <outlet property="passwordTextField" destination="KiT-mN-6TK" id="aDB-UF-uGE"/>
+                        <outlet property="usernameTextField" destination="L7a-Kf-hRP" id="ZMq-ax-BYz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
