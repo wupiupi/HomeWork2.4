@@ -26,16 +26,14 @@ final class LoginViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    override func shouldPerformSegue(
-        withIdentifier identifier: String,
-        sender: Any?
-    ) -> Bool {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         guard usernameTextField.text == "Paul", passwordTextField.text == "Password" else {
             showAlert(
                 title: "Invalid login or password",
-                message: "Please, enter valid data."
-            )
+                message: "Please, enter valid data.") {
+                    self.passwordTextField.text = nil
+                }
             return false
         }
         return true
@@ -54,34 +52,26 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotButtonDidTapped(_ sender: UIButton) {
-        switch sender.tag {
-            case 0: showAlert(
-                title: "I got you!",
-                message: "Your username is 'Paul'"
-            )
-            default: showAlert(
-                title: "I got you!",
-                message: "Your password is 'Password'"
-            )
-        }
+        sender.tag == 0
+        ? showAlert(title: "I got you!", message: "Your username is 'Paul'")
+        : showAlert(title: "I got you!", message: "Your password is 'Password'")
     }
     
     
+    
     // MARK: - Private methods
-    private func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(
             title: title,
             message: message,
             preferredStyle: .alert
         )
-        alert.addAction(
-            UIAlertAction(title: "Добре",
-                          style: .default,
-                          handler: {
-                              _ in
-                              self.passwordTextField.text = nil
-                          })
-        )
+        
+        let alertAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            completion?()
+        }
+        
+        alert.addAction(alertAction)
         present(alert, animated: true)
     }
 }
