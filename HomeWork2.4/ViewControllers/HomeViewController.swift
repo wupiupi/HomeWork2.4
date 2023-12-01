@@ -12,14 +12,17 @@ final class HomeViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet var greetingLabel: UILabel!
     
-    // MARK: - Propertie
+    // MARK: - Public Properties
     var greeting: String!
+    
+    //MARK: - Private Properties
+    private let greetings = ["Hello", "Hi", "Hello there", "sup"]
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        greetingLabel.text = greeting
+        greetingLabel.text = "\(greetings.randomElement() ?? ""), \(greeting ?? "")!"
         setupUI()
     }
     
