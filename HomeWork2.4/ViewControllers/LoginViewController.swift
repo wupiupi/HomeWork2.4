@@ -13,22 +13,22 @@ final class LoginViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    @IBOutlet var loginButton: UIButton!
-    
     // MARK: - Private Properties
-    private let greetings = ["Hello", "Hi", "Hello there", "sup"]
-    
+    private let user = "Paul"
+    private let password = "Password"
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.layer.cornerRadius = 12
+        
+        usernameTextField.text = user
+        passwordTextField.text = password
     }
     
     // MARK: - Navigation
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        guard usernameTextField.text == "Paul", passwordTextField.text == "Password" else {
+        guard usernameTextField.text == user, passwordTextField.text == password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter valid data.") {
@@ -40,9 +40,8 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let homeVC = segue.destination as? HomeViewController
-        homeVC?.greeting = "\(greetings.randomElement() ?? ""), \(usernameTextField.text ?? "")!"
+        guard let homeVC = segue.destination as? HomeViewController else { return }
+        homeVC.greeting = user
     }
     
     // MARK: - IB Actions
@@ -53,8 +52,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotButtonDidTapped(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "I got you!", message: "Your username is 'Paul'")
-        : showAlert(title: "I got you!", message: "Your password is 'Password'")
+        ? showAlert(title: "I got you!", message: "Your username is \(user)")
+        : showAlert(title: "I got you!", message: "Your password is \(password)")
     }
     
     
@@ -67,7 +66,7 @@ final class LoginViewController: UIViewController {
             preferredStyle: .alert
         )
         
-        let alertAction = UIAlertAction(title: "Ok", style: .default) { _ in
+        let alertAction = UIAlertAction(title: "Добре", style: .default) { _ in
             completion?()
         }
         
@@ -80,6 +79,7 @@ final class LoginViewController: UIViewController {
 extension LoginViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 }
