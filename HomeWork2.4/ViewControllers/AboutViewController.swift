@@ -10,7 +10,6 @@ import UIKit
 final class AboutViewController: UIViewController {
     
     // MARK: - IB Outlets
-    
     @IBOutlet var imageView: UIImageView!
     
     @IBOutlet var nameLabel: UILabel!
@@ -34,6 +33,7 @@ final class AboutViewController: UIViewController {
         navigationItem.backButtonTitle = "\(user.person.name) \(user.person.surname)"
     }
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let bioVC = segue.destination as? BioViewController else { return }
         bioVC.user = user

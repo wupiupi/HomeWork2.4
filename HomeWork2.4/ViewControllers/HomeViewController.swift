@@ -13,7 +13,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet var greetingLabel: UILabel!
     
     // MARK: - Public Properties
-    var greeting: String!
+    var user: User!
     
     //MARK: - Private Properties
     private let greetings = ["Hello", "Hi", "Hello there", "sup"]
@@ -22,21 +22,11 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        greetingLabel.text = "\(greetings.randomElement() ?? ""), \(greeting ?? "")!"
-        setupUI()
+        greetingLabel.text =
+            """
+            \(greetings.randomElement() ?? ""), \(user.name)!
+            My name is \(user.person.name)!
+            """
+        setGradientView()
     }
-    
-    // MARK: - Setup UI
-    
-    private func setupUI() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.colors = [
-            UIColor.systemPink.cgColor,
-            UIColor.systemTeal.cgColor,
-            UIColor.systemMint.cgColor
-        ]
-        view.layer.insertSublayer(gradientLayer, at: 0)
-    }
-     
 }

@@ -14,21 +14,20 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     // MARK: - Private Properties
-    private let user = "Paul"
-    private let password = "Password"
+    private let user = User.getUser()
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        usernameTextField.text = user
-        passwordTextField.text = password
+        usernameTextField.text = user.name
+        passwordTextField.text = user.password
     }
     
     // MARK: - Navigation
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        guard usernameTextField.text == user, passwordTextField.text == password else {
+        guard usernameTextField.text == user.name, passwordTextField.text == user.password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter valid data.") {
@@ -40,8 +39,19 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let homeVC = segue.destination as? HomeViewController else { return }
-        homeVC.greeting = user
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        
+        tabBarVC.viewControllers?.forEach { viewController in
+            
+            if let homeVC = viewController as? HomeViewController {
+                homeVC.user = user
+            }
+            
+            if let navVC = viewController as? UINavigationController {
+                guard let aboutVC = navVC.topViewController as? AboutViewController else { return }
+                aboutVC.user = user
+            }
+        }
     }
     
     // MARK: - IB Actions
@@ -53,7 +63,7 @@ final class LoginViewController: UIViewController {
     @IBAction func forgotButtonDidTapped(_ sender: UIButton) {
         sender.tag == 0
         ? showAlert(title: "I got you!", message: "Your username is \(user)")
-        : showAlert(title: "I got you!", message: "Your password is \(password)")
+        : showAlert(title: "I got you!", message: "Your password is \(user.password)")
     }
     
     
