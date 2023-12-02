@@ -5,4 +5,11 @@
 //  Created by Paul Makey on 1.12.23.
 //
 
-import Foundation
+struct Person {
+    let name: String
+    let surname: String
+    let age: String
+    let university: String
+    let specialization: String
+    let bio: String
+}
