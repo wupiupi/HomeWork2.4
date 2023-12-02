@@ -3,4 +3,130 @@
    uuid = "7C9AAF94-49F4-4D78-B32C-06E1B5EBB136"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6228CA6-178D-4387-B3F8-24ADC65252DC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeWork2.4/ViewControllers/AboutViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "AboutViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "D6228CA6-178D-4387-B3F8-24ADC65252DC - 5186746a841d246b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomeWork2_4.AboutViewController.user.getter : Swift.Optional&lt;HomeWork2_4.User&gt;"
+                  moduleName = "HomeWork2.4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paulmakey/Desktop/Swift/SwiftBook/Homeworks/HomeWork2.4/HomeWork2.4/ViewControllers/AboutViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "D6228CA6-178D-4387-B3F8-24ADC65252DC - f7aff69ac0a80467"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomeWork2_4.AboutViewController.user.setter : Swift.Optional&lt;HomeWork2_4.User&gt;"
+                  moduleName = "HomeWork2.4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paulmakey/Desktop/Swift/SwiftBook/Homeworks/HomeWork2.4/HomeWork2.4/ViewControllers/AboutViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "D6228CA6-178D-4387-B3F8-24ADC65252DC - 922a25be92f77f86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomeWork2_4.AboutViewController.user.modify : Swift.Optional&lt;HomeWork2_4.User&gt;"
+                  moduleName = "HomeWork2.4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paulmakey/Desktop/Swift/SwiftBook/Homeworks/HomeWork2.4/HomeWork2.4/ViewControllers/AboutViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D6228CA6-178D-4387-B3F8-24ADC65252DC - e8440a20ff3dcd20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomeWork2_4.AboutViewController.user.modify : Swift.Optional&lt;HomeWork2_4.User&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "HomeWork2.4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paulmakey/Desktop/Swift/SwiftBook/Homeworks/HomeWork2.4/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "D6228CA6-178D-4387-B3F8-24ADC65252DC - cb62047552f9193"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomeWork2_4.AboutViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; HomeWork2_4.AboutViewController"
+                  moduleName = "HomeWork2.4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paulmakey/Desktop/Swift/SwiftBook/Homeworks/HomeWork2.4/HomeWork2.4/ViewControllers/AboutViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "D6228CA6-178D-4387-B3F8-24ADC65252DC - 545e55e4d2ec5794"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomeWork2_4.AboutViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;HomeWork2_4.AboutViewController&gt;"
+                  moduleName = "HomeWork2.4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paulmakey/Desktop/Swift/SwiftBook/Homeworks/HomeWork2.4/HomeWork2.4/ViewControllers/AboutViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3194F337-EEB3-4881-ABE0-993A6533D2CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeWork2.4/ViewControllers/AboutViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "AboutViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
