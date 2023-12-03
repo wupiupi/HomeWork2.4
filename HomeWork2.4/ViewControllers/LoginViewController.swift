@@ -45,9 +45,7 @@ final class LoginViewController: UIViewController {
             
             if let homeVC = viewController as? HomeViewController {
                 homeVC.user = user
-            }
-            
-            if let navVC = viewController as? UINavigationController {
+            } else if let navVC = viewController as? UINavigationController {
                 guard let aboutVC = navVC.topViewController as? AboutViewController else { return }
                 aboutVC.user = user
             }
